@@ -1,2128 +1,2377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spice Garden Restaurant | Fresh Indian Food | Jaipur</title>
-    <meta name="description" content="Best Indian restaurant in Jaipur. Fresh, tasty, hygienic food. Order on WhatsApp for quick service. Dine-in, takeaway & home delivery available.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanha Restaurant | Fresh Indian Food | Bhratpur</title>
+    <meta
+      name="description"
+      content="Best Indian restaurant in Bhratpur. Fresh, tasty, hygienic food. Order on WhatsApp for quick service. Dine-in, takeaway & home delivery available."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        :root {
-            --primary-red: #8B0000;
-            --dark-red: #6B0000;
-            --gold: #d4af37;
-            --dark-gold: #b8941f;
-            --charcoal: #1a1a1a;
-            --dark-bg: #0d0d0d;
-            --light-cream: #faf8f3;
-            --whatsapp: #25D366;
-            --whatsapp-dark: #20bd5a;
-        }
+      :root {
+        --primary-red: #8b0000;
+        --dark-red: #6b0000;
+        --gold: #d4af37;
+        --dark-gold: #b8941f;
+        --charcoal: #1a1a1a;
+        --dark-bg: #0d0d0d;
+        --light-cream: #faf8f3;
+        --whatsapp: #25d366;
+        --whatsapp-dark: #20bd5a;
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        html {
-            scroll-behavior: smooth;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-            background: var(--light-cream);
-        }
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+        background: var(--light-cream);
+      }
 
-        /* Fade in animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+      /* Fade in animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        to {
+          opacity: 1;
         }
+      }
 
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
         }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        to {
+          opacity: 1;
+          transform: translateX(0);
         }
+      }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
         }
-
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
+        to {
+          opacity: 1;
+          transform: translateX(0);
         }
+      }
 
-        .animate-on-scroll {
-            opacity: 0;
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
         }
-
-        .animate-on-scroll.animated {
-            animation: fadeInUp 0.8s ease forwards;
+        to {
+          opacity: 1;
+          transform: scale(1);
         }
+      }
 
-        /* Header */
-        header {
-            background: rgba(13, 13, 13, 0.98);
-            backdrop-filter: blur(10px);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            transition: all 0.3s ease;
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
         }
-
-        header.scrolled {
-            padding: 12px 0;
-            box-shadow: 0 6px 40px rgba(0,0,0,0.5);
+        50% {
+          transform: scale(1.05);
         }
+      }
 
-        .header-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
         }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            font-weight: 900;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            animation: slideInLeft 0.8s ease;
+        50% {
+          transform: translateY(-10px);
         }
+      }
 
-        .logo::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: linear-gradient(to right, var(--gold), var(--primary-red));
-            transition: width 0.4s ease;
+      @keyframes shimmer {
+        0% {
+          background-position: -1000px 0;
         }
-
-        .logo:hover::after {
-            width: 100%;
+        100% {
+          background-position: 1000px 0;
         }
+      }
 
-        .header-actions {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-            animation: slideInRight 0.8s ease;
-        }
+      .animate-on-scroll {
+        opacity: 0;
+      }
 
-        .header-phone {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            padding: 12px 24px;
-            border: 2px solid var(--gold);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
+      .animate-on-scroll.animated {
+        animation: fadeInUp 0.8s ease forwards;
+      }
 
-        .header-phone::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
-            transition: left 0.5s;
-        }
+      /* Header */
+      header {
+        background: rgba(13, 13, 13, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        transition: all 0.3s ease;
+      }
 
-        .header-phone:hover::before {
-            left: 100%;
-        }
+      header.scrolled {
+        padding: 12px 0;
+        box-shadow: 0 6px 40px rgba(0, 0, 0, 0.5);
+      }
 
-        .header-phone:hover {
-            background: var(--gold);
-            color: var(--charcoal);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
-        }
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        .header-whatsapp {
-            background: var(--whatsapp);
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            padding: 12px 24px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        font-weight: 900;
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        animation: slideInLeft 0.8s ease;
+      }
 
-        .header-whatsapp:hover {
-            background: var(--whatsapp-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
-        }
+      .logo::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: linear-gradient(to right, var(--gold), var(--primary-red));
+        transition: width 0.4s ease;
+      }
 
-        /* Hero Section */
-        .hero {
-            position: relative;
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.92) 0%, rgba(13, 13, 13, 0.95) 100%), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(212,175,55,0.05)" stroke-width="1"/></pattern></defs><rect width="1920" height="1080" fill="%23000"/><rect width="1920" height="1080" fill="url(%23grid)"/><circle cx="200" cy="200" r="150" fill="rgba(139,0,0,0.1)"/><circle cx="1600" cy="300" r="200" fill="rgba(212,175,55,0.08)"/><circle cx="1000" cy="800" r="180" fill="rgba(139,0,0,0.1)"/></svg>');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            padding: 150px 20px 120px;
-            text-align: center;
-            overflow: hidden;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+      .logo:hover::after {
+        width: 100%;
+      }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
-            animation: pulse 8s infinite;
-        }
+      .header-actions {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        animation: slideInRight 0.8s ease;
+      }
 
-        .hero-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
+      .header-phone {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px 24px;
+        border: 2px solid var(--gold);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
 
-        .hero-badge {
-            display: inline-block;
-            background: rgba(212, 175, 55, 0.15);
-            border: 2px solid var(--gold);
-            color: var(--gold);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 25px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            animation: fadeIn 1s ease 0.2s backwards;
-        }
+      .header-phone::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(212, 175, 55, 0.3),
+          transparent
+        );
+        transition: left 0.5s;
+      }
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 72px;
-            margin-bottom: 20px;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
-            color: #fff;
-            font-weight: 900;
-            letter-spacing: 3px;
-            line-height: 1.1;
-            animation: fadeInUp 1s ease 0.4s backwards;
-        }
+      .header-phone:hover::before {
+        left: 100%;
+      }
 
-        .hero h1 .highlight {
-            background: linear-gradient(135deg, var(--gold) 0%, #ffd700 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: inline-block;
-            position: relative;
-        }
+      .header-phone:hover {
+        background: var(--gold);
+        color: var(--charcoal);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+      }
 
-        .tagline {
-            font-size: 28px;
-            margin-bottom: 25px;
-            color: var(--gold);
-            font-weight: 600;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            animation: fadeInUp 1s ease 0.6s backwards;
-            position: relative;
-            display: inline-block;
-        }
+      .header-whatsapp {
+        background: var(--whatsapp);
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 12px 24px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
 
-        .tagline::before,
-        .tagline::after {
-            content: '✦';
-            margin: 0 15px;
-            opacity: 0.7;
-        }
+      .header-whatsapp:hover {
+        background: var(--whatsapp-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+      }
 
-        .hero-description {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 700px;
-            margin: 0 auto 45px;
-            line-height: 1.8;
-            animation: fadeInUp 1s ease 0.8s backwards;
-        }
+      /* Hero Section */
+      .hero {
+        position: relative;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(139, 0, 0, 0.92) 0%,
+            rgba(13, 13, 13, 0.95) 100%
+          ),
+          url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(212,175,55,0.05)" stroke-width="1"/></pattern></defs><rect width="1920" height="1080" fill="%23000"/><rect width="1920" height="1080" fill="url(%23grid)"/><circle cx="200" cy="200" r="150" fill="rgba(139,0,0,0.1)"/><circle cx="1600" cy="300" r="200" fill="rgba(212,175,55,0.08)"/><circle cx="1000" cy="800" r="180" fill="rgba(139,0,0,0.1)"/></svg>');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: white;
+        padding: 150px 20px 120px;
+        text-align: center;
+        overflow: hidden;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease 1s backwards;
-        }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          circle at 30% 50%,
+          rgba(212, 175, 55, 0.1) 0%,
+          transparent 50%
+        );
+        animation: pulse 8s infinite;
+      }
 
-        .btn {
-            padding: 18px 45px;
-            font-size: 18px;
-            font-weight: 600;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 6px 25px rgba(0,0,0,0.3);
-            position: relative;
-            overflow: hidden;
-            font-family: 'Poppins', sans-serif;
-        }
+      .hero-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
 
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
+      .hero-badge {
+        display: inline-block;
+        background: rgba(212, 175, 55, 0.15);
+        border: 2px solid var(--gold);
+        color: var(--gold);
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        animation: fadeIn 1s ease 0.2s backwards;
+      }
 
-        .btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 72px;
+        margin-bottom: 20px;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-weight: 900;
+        letter-spacing: 3px;
+        line-height: 1.1;
+        animation: fadeInUp 1s ease 0.4s backwards;
+      }
 
-        .btn span {
-            position: relative;
-            z-index: 1;
-        }
+      .hero h1 .highlight {
+        background: linear-gradient(135deg, var(--gold) 0%, #ffd700 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: inline-block;
+        position: relative;
+      }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--whatsapp) 0%, #1ea952 100%);
-            color: white;
-            border: 2px solid transparent;
-        }
+      .tagline {
+        font-size: 28px;
+        margin-bottom: 25px;
+        color: var(--gold);
+        font-weight: 600;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        animation: fadeInUp 1s ease 0.6s backwards;
+        position: relative;
+        display: inline-block;
+      }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 35px rgba(37, 211, 102, 0.5);
-        }
+      .tagline::before,
+      .tagline::after {
+        content: "✦";
+        margin: 0 15px;
+        opacity: 0.7;
+      }
 
-        .btn-secondary {
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
-            color: white;
-            border: 2px solid transparent;
-        }
+      .hero-description {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 700px;
+        margin: 0 auto 45px;
+        line-height: 1.8;
+        animation: fadeInUp 1s ease 0.8s backwards;
+      }
 
-        .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 35px rgba(139, 0, 0, 0.5);
-        }
+      .cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: fadeInUp 1s ease 1s backwards;
+      }
 
-        .btn-outline {
-            background: transparent;
-            color: var(--gold);
-            border: 2px solid var(--gold);
-        }
+      .btn {
+        padding: 18px 45px;
+        font-size: 18px;
+        font-weight: 600;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+      }
 
-        .btn-outline:hover {
-            background: var(--gold);
-            color: var(--charcoal);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.5);
-        }
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.6s,
+          height 0.6s;
+      }
 
-        /* Floating elements */
-        .hero-decorations {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-        }
+      .btn:hover::before {
+        width: 300px;
+        height: 300px;
+      }
 
-        .float-element {
-            position: absolute;
-            font-size: 40px;
-            opacity: 0.15;
-            animation: float 6s ease-in-out infinite;
-        }
+      .btn span {
+        position: relative;
+        z-index: 1;
+      }
 
-        .float-element:nth-child(1) {
-            top: 10%;
-            left: 10%;
-            animation-delay: 0s;
-        }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--whatsapp) 0%, #1ea952 100%);
+        color: white;
+        border: 2px solid transparent;
+      }
 
-        .float-element:nth-child(2) {
-            top: 60%;
-            right: 15%;
-            animation-delay: 2s;
-        }
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 35px rgba(37, 211, 102, 0.5);
+      }
 
-        .float-element:nth-child(3) {
-            bottom: 15%;
-            left: 20%;
-            animation-delay: 4s;
-        }
+      .btn-secondary {
+        background: linear-gradient(
+          135deg,
+          var(--primary-red) 0%,
+          var(--dark-red) 100%
+        );
+        color: white;
+        border: 2px solid transparent;
+      }
 
-        .float-element:nth-child(4) {
-            top: 30%;
-            right: 25%;
-            animation-delay: 1s;
-        }
+      .btn-secondary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 35px rgba(139, 0, 0, 0.5);
+      }
 
-        /* Section Styling */
-        section {
-            padding: 120px 40px;
-            position: relative;
-        }
+      .btn-outline {
+        background: transparent;
+        color: var(--gold);
+        border: 2px solid var(--gold);
+      }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+      .btn-outline:hover {
+        background: var(--gold);
+        color: var(--charcoal);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 35px rgba(212, 175, 55, 0.5);
+      }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 70px;
-        }
+      /* Floating elements */
+      .hero-decorations {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+      }
 
-        .section-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
-            color: white;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+      .float-element {
+        position: absolute;
+        font-size: 40px;
+        opacity: 0.15;
+        animation: float 6s ease-in-out infinite;
+      }
 
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: var(--charcoal);
-            position: relative;
-            font-weight: 900;
-            line-height: 1.2;
-        }
+      .float-element:nth-child(1) {
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+      }
 
-        .section-title .highlight {
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+      .float-element:nth-child(2) {
+        top: 60%;
+        right: 15%;
+        animation-delay: 2s;
+      }
 
-        .section-subtitle {
-            font-size: 18px;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
+      .float-element:nth-child(3) {
+        bottom: 15%;
+        left: 20%;
+        animation-delay: 4s;
+      }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 5px;
-            background: linear-gradient(to right, var(--primary-red), var(--gold));
-            border-radius: 3px;
-        }
+      .float-element:nth-child(4) {
+        top: 30%;
+        right: 25%;
+        animation-delay: 1s;
+      }
 
-        /* About Section */
-        .about {
-            background: white;
-            position: relative;
-            overflow: hidden;
-        }
+      /* Section Styling */
+      section {
+        padding: 120px 40px;
+        position: relative;
+      }
 
-        .about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
-            border-radius: 50%;
-        }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
 
+      .section-header {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .section-badge {
+        display: inline-block;
+        background: linear-gradient(
+          135deg,
+          var(--primary-red),
+          var(--dark-red)
+        );
+        color: white;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: var(--charcoal);
+        position: relative;
+        font-weight: 900;
+        line-height: 1.2;
+      }
+
+      .section-title .highlight {
+        background: linear-gradient(
+          135deg,
+          var(--primary-red) 0%,
+          var(--gold) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .section-subtitle {
+        font-size: 18px;
+        color: #666;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 5px;
+        background: linear-gradient(to right, var(--primary-red), var(--gold));
+        border-radius: 3px;
+      }
+
+      /* About Section */
+      .about {
+        background: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(212, 175, 55, 0.05) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+
+      .about-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .about-image {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        transform: perspective(1000px) rotateY(-5deg);
+        transition: all 0.5s ease;
+      }
+
+      .about-image:hover {
+        transform: perspective(1000px) rotateY(0deg) scale(1.02);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+      }
+
+      .about-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 0, 0, 0.3) 0%,
+          rgba(212, 175, 55, 0.2) 100%
+        );
+        z-index: 1;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .about-text {
+        padding: 20px 0;
+      }
+
+      .about-text h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        color: var(--charcoal);
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .about-text p {
+        font-size: 17px;
+        line-height: 1.9;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .about-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 25px;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 0, 0, 0.05) 0%,
+          rgba(212, 175, 55, 0.05) 100%
+        );
+        border-radius: 15px;
+        border: 2px solid rgba(212, 175, 55, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .stat-item:hover {
+        transform: translateY(-5px);
+        border-color: var(--gold);
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+      }
+
+      .stat-number {
+        font-family: "Playfair Display", serif;
+        font-size: 42px;
+        font-weight: 900;
+        background: linear-gradient(
+          135deg,
+          var(--primary-red) 0%,
+          var(--gold) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 5px;
+      }
+
+      .stat-label {
+        font-size: 14px;
+        color: #666;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .experience-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-red),
+          var(--dark-red)
+        );
+        color: white;
+        padding: 18px 35px;
+        border-radius: 50px;
+        font-weight: 700;
+        margin-top: 30px;
+        font-size: 16px;
+        box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .experience-badge:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(139, 0, 0, 0.4);
+      }
+
+      /* Menu Section */
+      .menu {
+        background: linear-gradient(180deg, #faf8f3 0%, #ffffff 100%);
+        position: relative;
+      }
+
+      .menu::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(
+          180deg,
+          rgba(139, 0, 0, 0.02) 0%,
+          transparent 100%
+        );
+      }
+
+      .menu-categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 35px;
+        margin-top: 50px;
+        position: relative;
+      }
+
+      .menu-category {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .menu-category::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(to right, var(--primary-red), var(--gold));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+      }
+
+      .menu-category:hover::before {
+        transform: scaleX(1);
+      }
+
+      .menu-category:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        border-color: rgba(212, 175, 55, 0.3);
+      }
+
+      .category-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 0, 0, 0.1) 0%,
+          rgba(212, 175, 55, 0.1) 100%
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        margin-bottom: 25px;
+        transition: all 0.3s ease;
+      }
+
+      .menu-category:hover .category-icon {
+        transform: rotate(10deg) scale(1.1);
+        background: linear-gradient(
+          135deg,
+          rgba(139, 0, 0, 0.2) 0%,
+          rgba(212, 175, 55, 0.2) 100%
+        );
+      }
+
+      .category-title {
+        font-family: "Playfair Display", serif;
+        font-size: 26px;
+        color: var(--charcoal);
+        margin-bottom: 25px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .menu-items {
+        list-style: none;
+      }
+
+      .menu-items li {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        color: #555;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .menu-items li:hover {
+        color: var(--primary-red);
+        padding-left: 10px;
+      }
+
+      .menu-items li:last-child {
+        border-bottom: none;
+      }
+
+      .menu-items li::before {
+        content: "🍛";
+        font-size: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .menu-items li:hover::before {
+        transform: scale(1.2);
+      }
+
+      .menu-cta {
+        text-align: center;
+        margin-top: 60px;
+      }
+
+      .menu-cta-text {
+        font-size: 20px;
+        color: #666;
+        margin-bottom: 25px;
+        font-weight: 500;
+      }
+
+      .menu-cta-text strong {
+        color: var(--primary-red);
+      }
+
+      /* Why Choose Us */
+      .why-choose {
+        background: linear-gradient(
+          135deg,
+          var(--dark-bg) 0%,
+          var(--charcoal) 100%
+        );
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .why-choose::before {
+        content: "";
+        position: absolute;
+        top: -200px;
+        right: -200px;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(212, 175, 55, 0.1) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+
+      .why-choose::after {
+        content: "";
+        position: absolute;
+        bottom: -200px;
+        left: -200px;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(139, 0, 0, 0.1) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+
+      .why-choose .section-title,
+      .why-choose .section-subtitle {
+        color: white;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 35px;
+        margin-top: 50px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .feature {
+        text-align: center;
+        padding: 45px 35px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 20px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 2px solid rgba(212, 175, 55, 0.15);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 0, 0, 0.1) 0%,
+          rgba(212, 175, 55, 0.1) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .feature:hover::before {
+        opacity: 1;
+      }
+
+      .feature:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-10px);
+        border-color: var(--gold);
+        box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+      }
+
+      .feature-icon {
+        font-size: 55px;
+        margin-bottom: 20px;
+        display: inline-block;
+        transition: all 0.4s ease;
+        position: relative;
+        z-index: 1;
+      }
+
+      .feature:hover .feature-icon {
+        transform: scale(1.15) rotateY(360deg);
+      }
+
+      .feature h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        margin-bottom: 12px;
+        color: var(--gold);
+        font-weight: 700;
+        position: relative;
+        z-index: 1;
+      }
+
+      .feature p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 15px;
+        line-height: 1.7;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* WhatsApp Order Section */
+      .whatsapp-order {
+        background: linear-gradient(135deg, var(--whatsapp) 0%, #1ea952 100%);
+        color: white;
+        padding: 100px 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .whatsapp-order::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        animation: pulse 4s ease-in-out infinite;
+      }
+
+      .whatsapp-content {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .whatsapp-icon-large {
+        font-size: 80px;
+        margin-bottom: 30px;
+        display: inline-block;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .whatsapp-content h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 48px;
+        margin-bottom: 25px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        font-weight: 900;
+        line-height: 1.2;
+      }
+
+      .whatsapp-content p {
+        font-size: 20px;
+        margin-bottom: 40px;
+        line-height: 1.8;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .whatsapp-benefits {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin: 40px 0;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .whatsapp-benefit {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 20px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-benefit:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-5px);
+      }
+
+      .whatsapp-benefit-icon {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      .whatsapp-benefit-text {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .btn-whatsapp-large {
+        background: white;
+        color: var(--whatsapp);
+        padding: 22px 60px;
+        font-size: 22px;
+        font-weight: 700;
+        border-radius: 60px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      .btn-whatsapp-large::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(37, 211, 102, 0.1);
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.6s,
+          height 0.6s;
+      }
+
+      .btn-whatsapp-large:hover::before {
+        width: 400px;
+        height: 400px;
+      }
+
+      .btn-whatsapp-large:hover {
+        transform: scale(1.08);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+      }
+
+      .btn-whatsapp-large span {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Contact Section */
+      .contact {
+        background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          var(--light-cream) 100%
+        );
+        position: relative;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 50px;
+        margin-top: 50px;
+      }
+
+      .contact-info-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .contact-info {
+        background: white;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .contact-info:hover {
+        transform: translateX(10px);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+        border-color: rgba(212, 175, 55, 0.3);
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 0, 0, 0.1) 0%,
+          rgba(212, 175, 55, 0.1) 100%
+        );
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+      }
+
+      .contact-info:hover .contact-icon {
+        transform: rotate(10deg) scale(1.1);
+        background: linear-gradient(
+          135deg,
+          rgba(139, 0, 0, 0.2) 0%,
+          rgba(212, 175, 55, 0.2) 100%
+        );
+      }
+
+      .contact-details h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        color: var(--charcoal);
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+
+      .contact-details p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .contact-details a {
+        color: var(--primary-red);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .contact-details a:hover {
+        color: var(--gold);
+      }
+
+      .map-wrapper {
+        position: sticky;
+        top: 100px;
+      }
+
+      .map-container {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        height: 100%;
+        min-height: 500px;
+        background: #ddd;
+        transition: all 0.3s ease;
+        border: 3px solid white;
+      }
+
+      .map-container:hover {
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        transform: scale(1.02);
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        min-height: 500px;
+      }
+
+      .opening-hours {
+        background: linear-gradient(
+          135deg,
+          var(--primary-red) 0%,
+          var(--dark-red) 100%
+        );
+        color: white;
+        padding: 30px;
+        border-radius: 20px;
+        margin-top: 25px;
+        box-shadow: 0 10px 40px rgba(139, 0, 0, 0.3);
+      }
+
+      .opening-hours h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .opening-hours p {
+        font-size: 16px;
+        line-height: 1.8;
+        opacity: 0.95;
+      }
+
+      .opening-hours .status-badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
+      /* Footer */
+      footer {
+        background: linear-gradient(
+          135deg,
+          var(--dark-bg) 0%,
+          var(--charcoal) 100%
+        );
+        color: white;
+        padding: 60px 40px 30px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--gold),
+          transparent
+        );
+      }
+
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 50px;
+        margin-bottom: 40px;
+      }
+
+      .footer-about {
+        padding-right: 30px;
+      }
+
+      .footer-logo {
+        font-family: "Playfair Display", serif;
+        font-size: 36px;
+        font-weight: 900;
+        color: var(--gold);
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+
+      .footer-description {
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.8;
+        margin-bottom: 25px;
+        font-size: 15px;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-link {
+        width: 45px;
+        height: 45px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .social-link:hover {
+        background: var(--gold);
+        transform: translateY(-5px);
+        border-color: var(--gold);
+      }
+
+      .footer-section h4 {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        color: var(--gold);
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.75);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 15px;
+        display: inline-block;
+      }
+
+      .footer-links a:hover {
+        color: var(--gold);
+        padding-left: 5px;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 15px;
+      }
+
+      .footer-contact-item span {
+        font-size: 18px;
+      }
+
+      .footer-whatsapp {
+        margin: 30px 0;
+        text-align: center;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 30px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .footer-bottom p {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+      }
+
+      .footer-bottom a {
+        color: var(--gold);
+        text-decoration: none;
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
         .about-content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-top: 50px;
+          grid-template-columns: 1fr;
         }
 
         .about-image {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: all 0.5s ease;
-        }
-
-        .about-image:hover {
-            transform: perspective(1000px) rotateY(0deg) scale(1.02);
-            box-shadow: 0 25px 70px rgba(0,0,0,0.2);
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.3) 0%, rgba(212, 175, 55, 0.2) 100%);
-            z-index: 1;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .about-text {
-            padding: 20px 0;
-        }
-
-        .about-text h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            color: var(--charcoal);
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .about-text p {
-            font-size: 17px;
-            line-height: 1.9;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 25px;
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
-            border-radius: 15px;
-            border: 2px solid rgba(212, 175, 55, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
-        }
-
-        .stat-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 42px;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: #666;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .experience-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
-            color: white;
-            padding: 18px 35px;
-            border-radius: 50px;
-            font-weight: 700;
-            margin-top: 30px;
-            font-size: 16px;
-            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .experience-badge:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(139, 0, 0, 0.4);
-        }
-
-        /* Menu Section */
-        .menu {
-            background: linear-gradient(180deg, #faf8f3 0%, #ffffff 100%);
-            position: relative;
-        }
-
-        .menu::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(180deg, rgba(139, 0, 0, 0.02) 0%, transparent 100%);
-        }
-
-        .menu-categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
-            position: relative;
-        }
-
-        .menu-category {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .menu-category::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(to right, var(--primary-red), var(--gold));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .menu-category:hover::before {
-            transform: scaleX(1);
-        }
-
-        .menu-category:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            border-color: rgba(212, 175, 55, 0.3);
-        }
-
-        .category-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 35px;
-            margin-bottom: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .menu-category:hover .category-icon {
-            transform: rotate(10deg) scale(1.1);
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.2) 0%, rgba(212, 175, 55, 0.2) 100%);
-        }
-
-        .category-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 26px;
-            color: var(--charcoal);
-            margin-bottom: 25px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .menu-items {
-            list-style: none;
-        }
-
-        .menu-items li {
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            color: #555;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .menu-items li:hover {
-            color: var(--primary-red);
-            padding-left: 10px;
-        }
-
-        .menu-items li:last-child {
-            border-bottom: none;
-        }
-
-        .menu-items li::before {
-            content: '🍛';
-            font-size: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .menu-items li:hover::before {
-            transform: scale(1.2);
-        }
-
-        .menu-cta {
-            text-align: center;
-            margin-top: 60px;
-        }
-
-        .menu-cta-text {
-            font-size: 20px;
-            color: #666;
-            margin-bottom: 25px;
-            font-weight: 500;
-        }
-
-        .menu-cta-text strong {
-            color: var(--primary-red);
-        }
-
-        /* Why Choose Us */
-        .why-choose {
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--charcoal) 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .why-choose::before {
-            content: '';
-            position: absolute;
-            top: -200px;
-            right: -200px;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .why-choose::after {
-            content: '';
-            position: absolute;
-            bottom: -200px;
-            left: -200px;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(139, 0, 0, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .why-choose .section-title,
-        .why-choose .section-subtitle {
-            color: white;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .feature {
-            text-align: center;
-            padding: 45px 35px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 20px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 2px solid rgba(212, 175, 55, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .feature:hover::before {
-            opacity: 1;
-        }
-
-        .feature:hover {
-            background: rgba(255,255,255,0.08);
-            transform: translateY(-10px);
-            border-color: var(--gold);
-            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
-        }
-
-        .feature-icon {
-            font-size: 55px;
-            margin-bottom: 20px;
-            display: inline-block;
-            transition: all 0.4s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .feature:hover .feature-icon {
-            transform: scale(1.15) rotateY(360deg);
-        }
-
-        .feature h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            margin-bottom: 12px;
-            color: var(--gold);
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-        }
-
-        .feature p {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 15px;
-            line-height: 1.7;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* WhatsApp Order Section */
-        .whatsapp-order {
-            background: linear-gradient(135deg, var(--whatsapp) 0%, #1ea952 100%);
-            color: white;
-            padding: 100px 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .whatsapp-order::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: pulse 4s ease-in-out infinite;
-        }
-
-        .whatsapp-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .whatsapp-icon-large {
-            font-size: 80px;
-            margin-bottom: 30px;
-            display: inline-block;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .whatsapp-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            margin-bottom: 25px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-            font-weight: 900;
-            line-height: 1.2;
-        }
-
-        .whatsapp-content p {
-            font-size: 20px;
-            margin-bottom: 40px;
-            line-height: 1.8;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .whatsapp-benefits {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin: 40px 0;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .whatsapp-benefit {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 20px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .whatsapp-benefit:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-5px);
-        }
-
-        .whatsapp-benefit-icon {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-
-        .whatsapp-benefit-text {
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .btn-whatsapp-large {
-            background: white;
-            color: var(--whatsapp);
-            padding: 22px 60px;
-            font-size: 22px;
-            font-weight: 700;
-            border-radius: 60px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-
-        .btn-whatsapp-large::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(37, 211, 102, 0.1);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn-whatsapp-large:hover::before {
-            width: 400px;
-            height: 400px;
-        }
-
-        .btn-whatsapp-large:hover {
-            transform: scale(1.08);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.35);
-        }
-
-        .btn-whatsapp-large span {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: linear-gradient(180deg, #ffffff 0%, var(--light-cream) 100%);
-            position: relative;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 50px;
-            margin-top: 50px;
-        }
-
-        .contact-info-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .contact-info {
-            background: white;
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .contact-info:hover {
-            transform: translateX(10px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
-            border-color: rgba(212, 175, 55, 0.3);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            flex-shrink: 0;
-            transition: all 0.3s ease;
-        }
-
-        .contact-info:hover .contact-icon {
-            transform: rotate(10deg) scale(1.1);
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.2) 0%, rgba(212, 175, 55, 0.2) 100%);
-        }
-
-        .contact-details h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            color: var(--charcoal);
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-
-        .contact-details p {
-            color: #666;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .contact-details a {
-            color: var(--primary-red);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .contact-details a:hover {
-            color: var(--gold);
-        }
-
-        .map-wrapper {
-            position: sticky;
-            top: 100px;
-        }
-
-        .map-container {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
-            height: 100%;
-            min-height: 500px;
-            background: #ddd;
-            transition: all 0.3s ease;
-            border: 3px solid white;
-        }
-
-        .map-container:hover {
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-            transform: scale(1.02);
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            min-height: 500px;
-        }
-
-        .opening-hours {
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 20px;
-            margin-top: 25px;
-            box-shadow: 0 10px 40px rgba(139, 0, 0, 0.3);
-        }
-
-        .opening-hours h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .opening-hours p {
-            font-size: 16px;
-            line-height: 1.8;
-            opacity: 0.95;
-        }
-
-        .opening-hours .status-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-top: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--charcoal) 100%);
-            color: white;
-            padding: 60px 40px 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(to right, transparent, var(--gold), transparent);
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
+          transform: none;
         }
 
         .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 40px;
+          grid-template-columns: 1fr 1fr;
         }
 
         .footer-about {
-            padding-right: 30px;
+          grid-column: 1 / -1;
         }
 
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            font-weight: 900;
-            color: var(--gold);
-            margin-bottom: 20px;
-            letter-spacing: 2px;
+        .contact-grid {
+          grid-template-columns: 1fr;
         }
 
-        .footer-description {
-            color: rgba(255, 255, 255, 0.75);
-            line-height: 1.8;
-            margin-bottom: 25px;
-            font-size: 15px;
+        .map-wrapper {
+          position: relative;
+          top: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        header {
+          padding: 15px 0;
         }
 
-        .footer-social {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
+        .header-content {
+          padding: 0 20px;
+          flex-direction: column;
+          gap: 15px;
         }
 
-        .social-link {
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+        .header-actions {
+          width: 100%;
+          justify-content: center;
         }
 
-        .social-link:hover {
-            background: var(--gold);
-            transform: translateY(-5px);
-            border-color: var(--gold);
+        .header-phone,
+        .header-whatsapp {
+          flex: 1;
+          text-align: center;
+          justify-content: center;
         }
 
-        .footer-section h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            color: var(--gold);
-            margin-bottom: 20px;
-            font-weight: 700;
+        .hero {
+          padding: 100px 20px 80px;
+          min-height: auto;
         }
 
-        .footer-links {
-            list-style: none;
+        .hero h1 {
+          font-size: 40px;
         }
 
-        .footer-links li {
-            margin-bottom: 12px;
+        .tagline {
+          font-size: 20px;
+          letter-spacing: 2px;
         }
 
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.75);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 15px;
-            display: inline-block;
+        .hero-description {
+          font-size: 16px;
         }
 
-        .footer-links a:hover {
-            color: var(--gold);
-            padding-left: 5px;
+        .section-title {
+          font-size: 36px;
         }
 
-        .footer-contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.75);
-            font-size: 15px;
+        .section-subtitle {
+          font-size: 16px;
         }
 
-        .footer-contact-item span {
-            font-size: 18px;
+        section {
+          padding: 80px 20px;
         }
 
-        .footer-whatsapp {
-            margin: 30px 0;
-            text-align: center;
+        .about-stats {
+          grid-template-columns: 1fr;
+        }
+
+        .menu-categories {
+          grid-template-columns: 1fr;
+        }
+
+        .features {
+          grid-template-columns: 1fr;
+        }
+
+        .whatsapp-benefits {
+          grid-template-columns: 1fr;
+        }
+
+        .whatsapp-content h2 {
+          font-size: 36px;
+        }
+
+        .whatsapp-content p {
+          font-size: 17px;
+        }
+
+        .btn-whatsapp-large {
+          padding: 18px 40px;
+          font-size: 18px;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 30px;
-            margin-top: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
+          flex-direction: column;
+          text-align: center;
         }
 
-        .footer-bottom p {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 14px;
+        .cta-buttons {
+          flex-direction: column;
+          width: 100%;
         }
 
-        .footer-bottom a {
-            color: var(--gold);
-            text-decoration: none;
+        .btn {
+          width: 100%;
+          justify-content: center;
         }
+      }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .about-content-wrapper {
-                grid-template-columns: 1fr;
-            }
+      /* Scroll to top button */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 55px;
+        height: 55px;
+        background: linear-gradient(135deg, var(--primary-red), var(--gold));
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      }
 
-            .about-image {
-                transform: none;
-            }
+      .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
 
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+      .scroll-to-top:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      }
 
-            .footer-about {
-                grid-column: 1 / -1;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .map-wrapper {
-                position: relative;
-                top: 0;
-            }
+      /* Loading animation */
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
         }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 15px 0;
-            }
-
-            .header-content {
-                padding: 0 20px;
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .header-actions {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .header-phone,
-            .header-whatsapp {
-                flex: 1;
-                text-align: center;
-                justify-content: center;
-            }
-
-            .hero {
-                padding: 100px 20px 80px;
-                min-height: auto;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .tagline {
-                font-size: 20px;
-                letter-spacing: 2px;
-            }
-
-            .hero-description {
-                font-size: 16px;
-            }
-
-            .section-title {
-                font-size: 36px;
-            }
-
-            .section-subtitle {
-                font-size: 16px;
-            }
-
-            section {
-                padding: 80px 20px;
-            }
-
-            .about-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .menu-categories {
-                grid-template-columns: 1fr;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .whatsapp-benefits {
-                grid-template-columns: 1fr;
-            }
-
-            .whatsapp-content h2 {
-                font-size: 36px;
-            }
-
-            .whatsapp-content p {
-                font-size: 17px;
-            }
-
-            .btn-whatsapp-large {
-                padding: 18px 40px;
-                font-size: 18px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        /* Scroll to top button */
-        .scroll-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 55px;
-            height: 55px;
-            background: linear-gradient(135deg, var(--primary-red), var(--gold));
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 24px;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 999;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-        }
+      /* Testimonial section (bonus) */
+      .testimonials {
+        background: white;
+        position: relative;
+      }
 
-        .scroll-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 35px;
+        margin-top: 50px;
+      }
 
-        .scroll-to-top:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-        }
+      .testimonial-card {
+        background: linear-gradient(
+          135deg,
+          rgba(139, 0, 0, 0.03) 0%,
+          rgba(212, 175, 55, 0.03) 100%
+        );
+        padding: 35px;
+        border-radius: 20px;
+        border: 2px solid rgba(212, 175, 55, 0.2);
+        transition: all 0.3s ease;
+        position: relative;
+      }
 
-        /* Loading animation */
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+      .testimonial-card::before {
+        content: '"';
+        font-size: 100px;
+        color: rgba(212, 175, 55, 0.15);
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-family: "Playfair Display", serif;
+      }
 
-        /* Testimonial section (bonus) */
-        .testimonials {
-            background: white;
-            position: relative;
-        }
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        border-color: var(--gold);
+      }
 
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
-        }
+      .testimonial-text {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+      }
 
-        .testimonial-card {
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.03) 0%, rgba(212, 175, 55, 0.03) 100%);
-            padding: 35px;
-            border-radius: 20px;
-            border: 2px solid rgba(212, 175, 55, 0.2);
-            transition: all 0.3s ease;
-            position: relative;
-        }
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
 
-        .testimonial-card::before {
-            content: '"';
-            font-size: 100px;
-            color: rgba(212, 175, 55, 0.15);
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            font-family: 'Playfair Display', serif;
-        }
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, var(--primary-red), var(--gold));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+      }
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            border-color: var(--gold);
-        }
+      .author-info h4 {
+        color: var(--charcoal);
+        font-weight: 600;
+        font-size: 16px;
+      }
 
-        .testimonial-text {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
+      .author-info p {
+        color: #999;
+        font-size: 14px;
+      }
 
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+      .rating {
+        color: #ffd700;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
 
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-red), var(--gold));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 20px;
-        }
+      /* Utility classes */
+      .text-gold {
+        color: var(--gold);
+      }
 
-        .author-info h4 {
-            color: var(--charcoal);
-            font-weight: 600;
-            font-size: 16px;
-        }
+      .text-red {
+        color: var(--primary-red);
+      }
 
-        .author-info p {
-            color: #999;
-            font-size: 14px;
-        }
-
-        .rating {
-            color: #ffd700;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        /* Utility classes */
-        .text-gold {
-            color: var(--gold);
-        }
-
-        .text-red {
-            color: var(--primary-red);
-        }
-
-        .bg-pattern {
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="rgba(212,175,55,0.05)" width="100" height="100"/></svg>');
-        }
+      .bg-pattern {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="rgba(212,175,55,0.05)" width="100" height="100"/></svg>');
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header -->
     <header id="header">
-        <div class="header-content">
-            <div class="logo">Spice Garden</div>
-            <div class="header-actions">
-                <a href="tel:+919876543210" class="header-phone">📞 +91 98765 43210</a>
-                <a href="https://wa.me/919876543210?text=Hello,%20I%20want%20to%20place%20an%20order%20/%20book%20a%20table." class="header-whatsapp" target="_blank">💬 WhatsApp</a>
-            </div>
+      <div class="header-content">
+        <div class="logo">Kanha Restaurant</div>
+        <div class="header-actions">
+          <a href="tel:+919588867561" class="header-phone"
+            >📞 +91 98765 43210</a
+          >
+          <a
+            href="https://wa.me/919588867561?text=Hello,%20I%20want%20to%20place%20an%20order%20/%20book%20a%20table."
+            class="header-whatsapp"
+            target="_blank"
+            >💬 WhatsApp</a
+          >
         </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-decorations">
-            <div class="float-element">🌶️</div>
-            <div class="float-element">🍛</div>
-            <div class="float-element">🥘</div>
-            <div class="float-element">🫓</div>
+      <div class="hero-decorations">
+        <div class="float-element">🌶️</div>
+        <div class="float-element">🍛</div>
+        <div class="float-element">🥘</div>
+        <div class="float-element">🫓</div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">🌟 Authentic Indian Cuisine</div>
+        <h1>Welcome to <span class="highlight">Kanha Restaurant</span></h1>
+        <div class="tagline">Fresh • Tasty • Hygienic Food</div>
+        <p class="hero-description">
+          Experience the rich flavors of India with our carefully crafted
+          dishes. Made with love, served with care, enjoyed by thousands of
+          happy customers.
+        </p>
+        <div class="cta-buttons">
+          <a
+            href="https://wa.me/919588867561?text=Hello,%20I%20want%20to%20place%20an%20order%20/%20book%20a%20table."
+            class="btn btn-primary"
+            target="_blank"
+          >
+            <span>📱 Order on WhatsApp</span>
+          </a>
+          <a href="tel:+919588867561" class="btn btn-secondary">
+            <span>📞 Call Now</span>
+          </a>
+          <a href="#menu" class="btn btn-outline">
+            <span>🍽️ View Menu</span>
+          </a>
         </div>
-        <div class="hero-content">
-            <div class="hero-badge">🌟 Authentic Indian Cuisine</div>
-            <h1>Welcome to <span class="highlight">Spice Garden</span></h1>
-            <div class="tagline">Fresh • Tasty • Hygienic Food</div>
-            <p class="hero-description">
-                Experience the rich flavors of India with our carefully crafted dishes. 
-                Made with love, served with care, enjoyed by thousands of happy customers.
-            </p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/919876543210?text=Hello,%20I%20want%20to%20place%20an%20order%20/%20book%20a%20table." class="btn btn-primary" target="_blank">
-                    <span>📱 Order on WhatsApp</span>
-                </a>
-                <a href="tel:+919876543210" class="btn btn-secondary">
-                    <span>📞 Call Now</span>
-                </a>
-                <a href="#menu" class="btn btn-outline">
-                    <span>🍽️ View Menu</span>
-                </a>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section class="about animate-on-scroll">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Our Story</div>
-                <h2 class="section-title">About <span class="highlight">Spice Garden</span></h2>
-                <p class="section-subtitle">
-                    Where tradition meets taste, and every meal is a celebration of authentic Indian flavors
-                </p>
-            </div>
-            
-            <div class="about-content-wrapper">
-                <div class="about-image">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 500'><defs><linearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%238B0000;stop-opacity:1'/><stop offset='100%25' style='stop-color:%23d4af37;stop-opacity:1'/></linearGradient></defs><rect width='600' height='500' fill='url(%23grad1)'/><circle cx='300' cy='250' r='80' fill='white' opacity='0.2'/><text x='300' y='260' font-size='80' text-anchor='middle' fill='white' opacity='0.8'>🍛</text></svg>" alt="Spice Garden Restaurant Interior">
-                </div>
-                
-                <div class="about-text">
-                    <h3>Serving Jaipur Since 2014</h3>
-                    <p>
-                        At Spice Garden, we believe that great food is more than just ingredients—it's about passion, 
-                        tradition, and the love we pour into every dish. For over a decade, we've been Jaipur's trusted 
-                        destination for authentic Indian cuisine that brings families together and creates lasting memories.
-                    </p>
-                    <p>
-                        Our kitchen is a testament to cleanliness and quality. We source only the freshest vegetables, 
-                        premium spices, and authentic ingredients daily. Every dish is prepared by our experienced chefs 
-                        who have mastered the art of Indian cooking through years of dedication.
-                    </p>
-                    <p>
-                        From traditional curries to tandoori specialties, each recipe has been perfected to deliver 
-                        the rich, aromatic flavors that Indian food is famous for. Whether you're dining in our 
-                        comfortable restaurant, taking away, or ordering delivery, we ensure the same high standards 
-                        and delicious taste every single time.
-                    </p>
-                    
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Years Serving</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">50K+</div>
-                            <div class="stat-label">Happy Customers</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Fresh Food</div>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-badge">
-                        ✨ Trusted by Thousands of Food Lovers
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Our Story</div>
+          <h2 class="section-title">
+            About <span class="highlight">Kanha Restaurant</span>
+          </h2>
+          <p class="section-subtitle">
+            Where tradition meets taste, and every meal is a celebration of
+            authentic Indian flavors
+          </p>
         </div>
+
+        <div class="about-content-wrapper">
+          <div class="about-image">
+            <img
+              src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 500'><defs><linearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%238B0000;stop-opacity:1'/><stop offset='100%25' style='stop-color:%23d4af37;stop-opacity:1'/></linearGradient></defs><rect width='600' height='500' fill='url(%23grad1)'/><circle cx='300' cy='250' r='80' fill='white' opacity='0.2'/><text x='300' y='260' font-size='80' text-anchor='middle' fill='white' opacity='0.8'>🍛</text></svg>"
+              alt="Kanha Restaurant Interior"
+            />
+          </div>
+
+          <div class="about-text">
+            <h3>Serving Bhratpur Since 2014</h3>
+            <p>
+              At Kanha Restaurant, we believe that great food is more than just
+              ingredients—it's about passion, tradition, and the love we pour
+              into every dish. For over a decade, we've been Bhratpur's trusted
+              destination for authentic Indian cuisine that brings families
+              together and creates lasting memories.
+            </p>
+            <p>
+              Our kitchen is a testament to cleanliness and quality. We source
+              only the freshest vegetables, premium spices, and authentic
+              ingredients daily. Every dish is prepared by our experienced chefs
+              who have mastered the art of Indian cooking through years of
+              dedication.
+            </p>
+            <p>
+              From traditional curries to tandoori specialties, each recipe has
+              been perfected to deliver the rich, aromatic flavors that Indian
+              food is famous for. Whether you're dining in our comfortable
+              restaurant, taking away, or ordering delivery, we ensure the same
+              high standards and delicious taste every single time.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Years Serving</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Happy Customers</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Fresh Food</div>
+              </div>
+            </div>
+
+            <div class="experience-badge">
+              ✨ Trusted by Thousands of Food Lovers
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Popular Menu Section -->
     <section class="menu animate-on-scroll" id="menu">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Our Specialties</div>
-                <h2 class="section-title">Popular <span class="highlight">Menu Items</span></h2>
-                <p class="section-subtitle">
-                    Handpicked favorites loved by our customers - prepared fresh daily with authentic spices and premium ingredients
-                </p>
-            </div>
-            
-            <div class="menu-categories">
-                <div class="menu-category">
-                    <div class="category-icon">🥗</div>
-                    <h3 class="category-title">Starters</h3>
-                    <ul class="menu-items">
-                        <li>Paneer Tikka</li>
-                        <li>Veg Manchurian</li>
-                        <li>Hara Bhara Kabab</li>
-                        <li>Crispy Spring Rolls</li>
-                        <li>Tandoori Mushroom</li>
-                    </ul>
-                </div>
-
-                <div class="menu-category">
-                    <div class="category-icon">🍛</div>
-                    <h3 class="category-title">Main Course</h3>
-                    <ul class="menu-items">
-                        <li>Dal Makhani</li>
-                        <li>Paneer Butter Masala</li>
-                        <li>Shahi Paneer</li>
-                        <li>Mix Veg Curry</li>
-                        <li>Rajma Masala</li>
-                        <li>Chole Bhature</li>
-                        <li>Palak Paneer</li>
-                    </ul>
-                </div>
-
-                <div class="menu-category">
-                    <div class="category-icon">🫓</div>
-                    <h3 class="category-title">Breads</h3>
-                    <ul class="menu-items">
-                        <li>Butter Naan</li>
-                        <li>Garlic Naan</li>
-                        <li>Cheese Naan</li>
-                        <li>Tandoori Roti</li>
-                        <li>Laccha Paratha</li>
-                        <li>Stuffed Kulcha</li>
-                    </ul>
-                </div>
-
-                <div class="menu-category">
-                    <div class="category-icon">🍚</div>
-                    <h3 class="category-title">Rice & Biryani</h3>
-                    <ul class="menu-items">
-                        <li>Veg Biryani</li>
-                        <li>Jeera Rice</li>
-                        <li>Veg Pulao</li>
-                        <li>Lemon Rice</li>
-                        <li>Fried Rice</li>
-                    </ul>
-                </div>
-
-                <div class="menu-category">
-                    <div class="category-icon">🥤</div>
-                    <h3 class="category-title">Beverages</h3>
-                    <ul class="menu-items">
-                        <li>Sweet Lassi</li>
-                        <li>Salted Lassi</li>
-                        <li>Fresh Lime Soda</li>
-                        <li>Masala Chaas</li>
-                        <li>Cold Coffee</li>
-                        <li>Masala Chai</li>
-                    </ul>
-                </div>
-
-                <div class="menu-category">
-                    <div class="category-icon">🍨</div>
-                    <h3 class="category-title">Desserts</h3>
-                    <ul class="menu-items">
-                        <li>Gulab Jamun</li>
-                        <li>Rasmalai</li>
-                        <li>Gajar Halwa</li>
-                        <li>Ice Cream</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="menu-cta">
-                <p class="menu-cta-text">
-                    Want to see our full menu? <strong>Order now on WhatsApp!</strong>
-                </p>
-                <a href="https://wa.me/919876543210?text=Hello,%20I%20want%20to%20see%20your%20full%20menu%20and%20place%20an%20order." class="btn btn-primary" target="_blank">
-                    <span>📱 View Full Menu on WhatsApp</span>
-                </a>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Our Specialties</div>
+          <h2 class="section-title">
+            Popular <span class="highlight">Menu Items</span>
+          </h2>
+          <p class="section-subtitle">
+            Handpicked favorites loved by our customers - prepared fresh daily
+            with authentic spices and premium ingredients
+          </p>
         </div>
+
+        <div class="menu-categories">
+          <div class="menu-category">
+            <div class="category-icon">🥗</div>
+            <h3 class="category-title">Starters</h3>
+            <ul class="menu-items">
+              <li>Paneer Tikka</li>
+              <li>Veg Manchurian</li>
+              <li>Hara Bhara Kabab</li>
+              <li>Crispy Spring Rolls</li>
+              <li>Tandoori Mushroom</li>
+            </ul>
+          </div>
+
+          <div class="menu-category">
+            <div class="category-icon">🍛</div>
+            <h3 class="category-title">Main Course</h3>
+            <ul class="menu-items">
+              <li>Dal Makhani</li>
+              <li>Paneer Butter Masala</li>
+              <li>Shahi Paneer</li>
+              <li>Mix Veg Curry</li>
+              <li>Rajma Masala</li>
+              <li>Chole Bhature</li>
+              <li>Palak Paneer</li>
+            </ul>
+          </div>
+
+          <div class="menu-category">
+            <div class="category-icon">🫓</div>
+            <h3 class="category-title">Breads</h3>
+            <ul class="menu-items">
+              <li>Butter Naan</li>
+              <li>Garlic Naan</li>
+              <li>Cheese Naan</li>
+              <li>Tandoori Roti</li>
+              <li>Laccha Paratha</li>
+              <li>Stuffed Kulcha</li>
+            </ul>
+          </div>
+
+          <div class="menu-category">
+            <div class="category-icon">🍚</div>
+            <h3 class="category-title">Rice & Biryani</h3>
+            <ul class="menu-items">
+              <li>Veg Biryani</li>
+              <li>Jeera Rice</li>
+              <li>Veg Pulao</li>
+              <li>Lemon Rice</li>
+              <li>Fried Rice</li>
+            </ul>
+          </div>
+
+          <div class="menu-category">
+            <div class="category-icon">🥤</div>
+            <h3 class="category-title">Beverages</h3>
+            <ul class="menu-items">
+              <li>Sweet Lassi</li>
+              <li>Salted Lassi</li>
+              <li>Fresh Lime Soda</li>
+              <li>Masala Chaas</li>
+              <li>Cold Coffee</li>
+              <li>Masala Chai</li>
+            </ul>
+          </div>
+
+          <div class="menu-category">
+            <div class="category-icon">🍨</div>
+            <h3 class="category-title">Desserts</h3>
+            <ul class="menu-items">
+              <li>Gulab Jamun</li>
+              <li>Rasmalai</li>
+              <li>Gajar Halwa</li>
+              <li>Ice Cream</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="menu-cta">
+          <p class="menu-cta-text">
+            Want to see our full menu? <strong>Order now on WhatsApp!</strong>
+          </p>
+          <a
+            href="https://wa.me/919588867561?text=Hello,%20I%20want%20to%20see%20your%20full%20menu%20and%20place%20an%20order."
+            class="btn btn-primary"
+            target="_blank"
+          >
+            <span>📱 View Full Menu on WhatsApp</span>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Why Choose Us -->
     <section class="why-choose animate-on-scroll">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge" style="background: rgba(212, 175, 55, 0.2); color: var(--gold);">Why We're Special</div>
-                <h2 class="section-title">Why Choose <span class="highlight">Spice Garden</span></h2>
-                <p class="section-subtitle">
-                    We don't just serve food—we create experiences that keep our customers coming back
-                </p>
-            </div>
-            
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">🌿</div>
-                    <h3>Fresh Ingredients Daily</h3>
-                    <p>We source only the freshest vegetables, authentic spices, and premium ingredients every morning for maximum flavor and nutrition</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Lightning Fast Service</h3>
-                    <p>Quick preparation and speedy delivery without ever compromising on quality or taste. Your time is valuable to us</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">💰</div>
-                    <h3>Affordable Prices</h3>
-                    <p>Enjoy restaurant-quality food at prices that fit your budget. Great taste doesn't have to be expensive</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
-                    <h3>Family Friendly</h3>
-                    <p>Comfortable atmosphere perfect for families, friends, and celebrations. Everyone is welcome at our table</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">✨</div>
-                    <h3>Spotless Hygiene</h3>
-                    <p>Certified kitchen with highest cleanliness standards. Your health and safety are our top priorities</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">📱</div>
-                    <h3>Easy WhatsApp Ordering</h3>
-                    <p>Skip the hassle! Order directly on WhatsApp with no extra charges, no apps to download, just simple and convenient</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <div
+            class="section-badge"
+            style="background: rgba(212, 175, 55, 0.2); color: var(--gold)"
+          >
+            Why We're Special
+          </div>
+          <h2 class="section-title">
+            Why Choose <span class="highlight">Kanha Restaurant</span>
+          </h2>
+          <p class="section-subtitle">
+            We don't just serve food—we create experiences that keep our
+            customers coming back
+          </p>
         </div>
+
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">🌿</div>
+            <h3>Fresh Ingredients Daily</h3>
+            <p>
+              We source only the freshest vegetables, authentic spices, and
+              premium ingredients every morning for maximum flavor and nutrition
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <h3>Lightning Fast Service</h3>
+            <p>
+              Quick preparation and speedy delivery without ever compromising on
+              quality or taste. Your time is valuable to us
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">💰</div>
+            <h3>Affordable Prices</h3>
+            <p>
+              Enjoy restaurant-quality food at prices that fit your budget.
+              Great taste doesn't have to be expensive
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">👨‍👩‍👧‍👦</div>
+            <h3>Family Friendly</h3>
+            <p>
+              Comfortable atmosphere perfect for families, friends, and
+              celebrations. Everyone is welcome at our table
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">✨</div>
+            <h3>Spotless Hygiene</h3>
+            <p>
+              Certified kitchen with highest cleanliness standards. Your health
+              and safety are our top priorities
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📱</div>
+            <h3>Easy WhatsApp Ordering</h3>
+            <p>
+              Skip the hassle! Order directly on WhatsApp with no extra charges,
+              no apps to download, just simple and convenient
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- WhatsApp Order Section -->
     <section class="whatsapp-order animate-on-scroll">
-        <div class="whatsapp-content">
-            <div class="whatsapp-icon-large">📱</div>
-            <h2>Order Instantly on WhatsApp</h2>
-            <p>
-                Skip the waiting, skip the apps, skip the extra charges! Order directly through WhatsApp 
-                and get quick, personal service. Just click, chat, and enjoy delicious food delivered to your door.
-            </p>
-            
-            <div class="whatsapp-benefits">
-                <div class="whatsapp-benefit">
-                    <div class="whatsapp-benefit-icon">💬</div>
-                    <div class="whatsapp-benefit-text">Direct Chat Support</div>
-                </div>
-                <div class="whatsapp-benefit">
-                    <div class="whatsapp-benefit-icon">⚡</div>
-                    <div class="whatsapp-benefit-text">Instant Confirmation</div>
-                </div>
-                <div class="whatsapp-benefit">
-                    <div class="whatsapp-benefit-icon">💰</div>
-                    <div class="whatsapp-benefit-text">No Extra Charges</div>
-                </div>
-            </div>
-            
-            <a href="https://wa.me/919876543210?text=Hello,%20I%20want%20to%20place%20an%20order%20/%20book%20a%20table." class="btn-whatsapp-large" target="_blank">
-                <span>📱 Start Your Order Now</span>
-            </a>
-            
-            <p style="margin-top: 25px; font-size: 16px; opacity: 0.9;">
-                💚 Trusted by thousands of happy customers in Jaipur
-            </p>
+      <div class="whatsapp-content">
+        <div class="whatsapp-icon-large">📱</div>
+        <h2>Order Instantly on WhatsApp</h2>
+        <p>
+          Skip the waiting, skip the apps, skip the extra charges! Order
+          directly through WhatsApp and get quick, personal service. Just click,
+          chat, and enjoy delicious food delivered to your door.
+        </p>
+
+        <div class="whatsapp-benefits">
+          <div class="whatsapp-benefit">
+            <div class="whatsapp-benefit-icon">💬</div>
+            <div class="whatsapp-benefit-text">Direct Chat Support</div>
+          </div>
+          <div class="whatsapp-benefit">
+            <div class="whatsapp-benefit-icon">⚡</div>
+            <div class="whatsapp-benefit-text">Instant Confirmation</div>
+          </div>
+          <div class="whatsapp-benefit">
+            <div class="whatsapp-benefit-icon">💰</div>
+            <div class="whatsapp-benefit-text">No Extra Charges</div>
+          </div>
         </div>
+
+        <a
+          href="https://wa.me/919588867561?text=Hello,%20I%20want%20to%20place%20an%20order%20/%20book%20a%20table."
+          class="btn-whatsapp-large"
+          target="_blank"
+        >
+          <span>📱 Start Your Order Now</span>
+        </a>
+
+        <p style="margin-top: 25px; font-size: 16px; opacity: 0.9">
+          💚 Trusted by thousands of happy customers in Bhratpur
+        </p>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials animate-on-scroll">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Customer Love</div>
-                <h2 class="section-title">What Our <span class="highlight">Customers Say</span></h2>
-                <p class="section-subtitle">
-                    Don't just take our word for it—hear from the people who keep coming back
-                </p>
-            </div>
-            
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">
-                        "Best Indian food in Jaipur! The paneer butter masala is absolutely delicious and the naan 
-                        is always fresh and hot. Ordering through WhatsApp is so convenient. Highly recommended!"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">R</div>
-                        <div class="author-info">
-                            <h4>Rahul Sharma</h4>
-                            <p>Regular Customer</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">
-                        "My family's favorite restaurant! The food is always fresh, the service is quick, and the 
-                        atmosphere is perfect for dining with kids. The dal makhani is our go-to order every week."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">P</div>
-                        <div class="author-info">
-                            <h4>Priya Malhotra</h4>
-                            <p>Food Enthusiast</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">
-                        "I've been ordering from Spice Garden for 3 years now. Consistent quality, great taste, 
-                        and affordable prices. The WhatsApp ordering makes it super easy to customize my order!"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">A</div>
-                        <div class="author-info">
-                            <h4>Amit Verma</h4>
-                            <p>Loyal Customer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Customer Love</div>
+          <h2 class="section-title">
+            What Our <span class="highlight">Customers Say</span>
+          </h2>
+          <p class="section-subtitle">
+            Don't just take our word for it—hear from the people who keep coming
+            back
+          </p>
         </div>
+
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="rating">★★★★★</div>
+            <p class="testimonial-text">
+              "Best Indian food in Bhratpur! The paneer butter masala is
+              absolutely delicious and the naan is always fresh and hot.
+              Ordering through WhatsApp is so convenient. Highly recommended!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">R</div>
+              <div class="author-info">
+                <h4>Rahul Sharma</h4>
+                <p>Regular Customer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="rating">★★★★★</div>
+            <p class="testimonial-text">
+              "My family's favorite restaurant! The food is always fresh, the
+              service is quick, and the atmosphere is perfect for dining with
+              kids. The dal makhani is our go-to order every week."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">P</div>
+              <div class="author-info">
+                <h4>Priya Malhotra</h4>
+                <p>Food Enthusiast</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="rating">★★★★★</div>
+            <p class="testimonial-text">
+              "I've been ordering from Kanha Restaurant for 3 years now.
+              Consistent quality, great taste, and affordable prices. The
+              WhatsApp ordering makes it super easy to customize my order!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">A</div>
+              <div class="author-info">
+                <h4>Amit Verma</h4>
+                <p>Loyal Customer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact animate-on-scroll">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Get in Touch</div>
-                <h2 class="section-title">Visit Us or <span class="highlight">Order Now</span></h2>
-                <p class="section-subtitle">
-                    Find us in the heart of Malviya Nagar, Jaipur. Dine-in, takeaway, or home delivery—we're here to serve you
-                </p>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-info-wrapper">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-details">
-                                <h3>Restaurant Address</h3>
-                                <p>Shop No. 45, Main Market Road<br>Malviya Nagar, Jaipur<br>Rajasthan 302017</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div class="contact-details">
-                                <h3>Phone Number</h3>
-                                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
-                                <p style="font-size: 14px; margin-top: 5px;">Available for calls: 11 AM - 11 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">💬</div>
-                            <div class="contact-details">
-                                <h3>WhatsApp Orders</h3>
-                                <p><a href="https://wa.me/919876543210?text=Hello,%20I%20want%20to%20place%20an%20order." target="_blank">Message us on WhatsApp</a></p>
-                                <p style="font-size: 14px; margin-top: 5px;">Quick response guaranteed!</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="opening-hours">
-                        <h3>⏰ Opening Hours</h3>
-                        <p><strong>Open All Days</strong></p>
-                        <p>Monday - Sunday: 11:00 AM - 11:00 PM</p>
-                        <p style="margin-top: 10px;">🍽️ Dine-In • 📦 Takeaway • 🏠 Home Delivery</p>
-                        <div class="status-badge">✅ Open Now</div>
-                    </div>
-                </div>
-                
-                <div class="map-wrapper">
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14237.123456789!2d75.8!3d26.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDU0JzAwLjAiTiA3NcKwNDgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Get in Touch</div>
+          <h2 class="section-title">
+            Visit Us or <span class="highlight">Order Now</span>
+          </h2>
+          <p class="section-subtitle">
+            Find us in the heart of Malviya Nagar, Bhratpur. Dine-in, takeaway,
+            or home delivery—we're here to serve you
+          </p>
         </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-wrapper">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-details">
+                  <h3>Restaurant Address</h3>
+                  <p>
+                    Mathura By pass Road<br />Bhratpur<br />Rajasthan 321001
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-details">
+                  <h3>Phone Number</h3>
+                  <p><a href="tel:+919588867561">+91 98765 43210</a></p>
+                  <p style="font-size: 14px; margin-top: 5px">
+                    Available for calls: 11 AM - 11 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <div class="contact-details">
+                  <h3>WhatsApp Orders</h3>
+                  <p>
+                    <a
+                      href="https://wa.me/919588867561?text=Hello,%20I%20want%20to%20place%20an%20order."
+                      target="_blank"
+                      >Message us on WhatsApp</a
+                    >
+                  </p>
+                  <p style="font-size: 14px; margin-top: 5px">
+                    Quick response guaranteed!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="opening-hours">
+              <h3>⏰ Opening Hours</h3>
+              <p><strong>Open All Days</strong></p>
+              <p>Monday - Sunday: 11:00 AM - 11:00 PM</p>
+              <p style="margin-top: 10px">
+                🍽️ Dine-In • 📦 Takeaway • 🏠 Home Delivery
+              </p>
+              <div class="status-badge">✅ Open Now</div>
+            </div>
+          </div>
+
+          <div class="map-wrapper">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14237.123456789!2d75.8!3d26.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDU0JzAwLjAiTiA3NcKwNDgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <div class="footer-logo">Spice Garden</div>
-                    <p class="footer-description">
-                        Experience the authentic taste of India right in the heart of Jaipur. We're committed 
-                        to serving fresh, delicious, and hygienic food that brings families and friends together. 
-                        Your satisfaction is our success.
-                    </p>
-                    <div class="footer-social">
-                        <a href="#" class="social-link">📘</a>
-                        <a href="#" class="social-link">📷</a>
-                        <a href="https://wa.me/919876543210" class="social-link" target="_blank">💬</a>
-                        <a href="#" class="social-link">🐦</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="https://wa.me/919876543210?text=Hello,%20I%20want%20to%20place%20an%20order." target="_blank">Order Food</a></li>
-                        <li><a href="https://wa.me/919876543210?text=Hello,%20I%20want%20to%20book%20a%20table." target="_blank">Book a Table</a></li>
-                        <li><a href="tel:+919876543210">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <div class="footer-contact-item">
-                        <span>📍</span>
-                        <p>Malviya Nagar, Jaipur<br>Rajasthan 302017</p>
-                    </div>
-                    <div class="footer-contact-item">
-                        <span>📞</span>
-                        <p>+91 98765 43210</p>
-                    </div>
-                    <div class="footer-contact-item">
-                        <span>⏰</span>
-                        <p>Open Daily<br>11 AM - 11 PM</p>
-                    </div>
-                </div>
+      <div class="footer-content">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <div class="footer-logo">Kanha Restaurant</div>
+            <p class="footer-description">
+              Experience the authentic taste of India right in the heart of
+              Bhratpur. We're committed to serving fresh, delicious, and
+              hygienic food that brings families and friends together. Your
+              satisfaction is our success.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link">📘</a>
+              <a href="#" class="social-link">📷</a>
+              <a
+                href="https://wa.me/919588867561"
+                class="social-link"
+                target="_blank"
+                >💬</a
+              >
+              <a href="#" class="social-link">🐦</a>
             </div>
-            
-            <div class="footer-whatsapp">
-                <a href="https://wa.me/919876543210?text=Hello,%20I%20want%20to%20place%20an%20order%20/%20book%20a%20table." class="btn btn-primary" target="_blank">
-                    <span>📱 Order on WhatsApp</span>
-                </a>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li>
+                <a
+                  href="https://wa.me/919588867561?text=Hello,%20I%20want%20to%20place%20an%20order."
+                  target="_blank"
+                  >Order Food</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/919588867561?text=Hello,%20I%20want%20to%20book%20a%20table."
+                  target="_blank"
+                  >Book a Table</a
+                >
+              </li>
+              <li><a href="tel:+919588867561">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <div class="footer-contact-item">
+              <span>📍</span>
+              <p>Mathura By pass Road<br />Bhratpur<br />Rajasthan 321001</p>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Spice Garden Restaurant. All rights reserved.</p>
-                <p>Made with ❤️ in Jaipur | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+            <div class="footer-contact-item">
+              <span>📞</span>
+              <p>+91 98765 43210</p>
             </div>
+            <div class="footer-contact-item">
+              <span>⏰</span>
+              <p>Open Daily<br />11 AM - 11 PM</p>
+            </div>
+          </div>
         </div>
+
+        <div class="footer-whatsapp">
+          <a
+            href="https://wa.me/919588867561?text=Hello,%20I%20want%20to%20place%20an%20order%20/%20book%20a%20table."
+            class="btn btn-primary"
+            target="_blank"
+          >
+            <span>📱 Order on WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Kanha Restaurant Restaurant. All rights reserved.</p>
+          <p>
+            Made with ❤️ in Bhratpur | <a href="#">Privacy Policy</a> |
+            <a href="#">Terms & Conditions</a>
+          </p>
+        </div>
+      </div>
     </footer>
-    
+
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop">↑</button>
-    
+
     <script>
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('animated');
-                    }, index * 100);
-                }
-            });
-        }, observerOptions);
-        
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
+      // Scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add("animated");
+            }, index * 100);
+          }
         });
-        
-        // Header scroll effect
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+      }, observerOptions);
+
+      document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Header scroll effect
+      const header = document.getElementById("header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Scroll to top button
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+          scrollToTopBtn.classList.add("visible");
+        } else {
+          scrollToTopBtn.classList.remove("visible");
+        }
+      });
+
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href !== "#" && href !== "#!") {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
             }
+          }
         });
-        
-        // Scroll to top button
-        const scrollToTopBtn = document.getElementById('scrollToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                scrollToTopBtn.classList.add('visible');
-            } else {
-                scrollToTopBtn.classList.remove('visible');
-            }
-        });
-        
-        scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href !== '#!') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
-        });
+      });
     </script>
-</body>
+  </body>
 </html>
